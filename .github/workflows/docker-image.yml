@@ -57,5 +57,3 @@ jobs:
 
     - name: Output image digest
       run: echo "Image pushed with digest ${{ steps.build.outputs.digest }}"
-
-git diff -- .github/workflows/docker-image.yml
