@@ -29,7 +29,7 @@ jobs:
     - name: Login to Harbor registry
       uses: docker/login-action@v3
       with:
-        registry: ${{ vars.REGISTRY }}
+        registry: kregistry.ddns.net
         username: ${{ secrets.HARBOR_USERNAME }}
         password: ${{ secrets.HARBOR_PASSWORD }}
 
@@ -57,3 +57,5 @@ jobs:
 
     - name: Output image digest
       run: echo "Image pushed with digest ${{ steps.build.outputs.digest }}"
+
+git diff -- .github/workflows/docker-image.yml
